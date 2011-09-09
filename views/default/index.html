@@ -1,0 +1,9 @@
+{{left_sidebar_enabled=right_sidebar_enabled=False}}
+{{extend 'layout.html'}}
+<h4>Ferremanta para geração de Boletim Informativo da Vilesoft</h4>
+<div style="float:left; width:50%">
+ {{=SQLTABLE(db(db.biv).select(limitby=(0,10),orderby=db.biv.id),headers='labels')}}
+</div>
+<div style="float:left; width:50%; margin:auto">
+<img src="http://www.vienasistemas.com.br/images/caixa_don.jpg"/>
+</div>

@@ -1,0 +1,162 @@
+timestamp: 2011-03-09T21:19:23.504000
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512)
+);
+success!
+timestamp: 2011-03-09T21:19:23.597000
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2011-03-09T21:19:23.720000
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user(id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group(id) ON DELETE CASCADE
+);
+success!
+timestamp: 2011-03-09T21:19:23.860000
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group(id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2011-03-09T21:19:23.965000
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user(id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2011-03-14T19:45:46.528000
+CREATE TABLE biv(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    numero INTEGER,
+    data DATE
+);
+success!
+timestamp: 2011-03-14T19:45:46.741000
+CREATE TABLE menu(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    caminho CHAR(512)
+);
+success!
+timestamp: 2011-03-14T19:45:46.910000
+CREATE TABLE rotina(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome CHAR(512)
+);
+success!
+timestamp: 2011-03-14T19:45:47.076000
+CREATE TABLE modulo(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    codigo INTEGER,
+    nome CHAR(512)
+);
+success!
+timestamp: 2011-03-14T19:45:47.244000
+CREATE TABLE item_biv(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    biv INTEGER REFERENCES biv(id) ON DELETE CASCADE,
+    rotina CHAR(512),
+    menu CHAR(512),
+    modulo CHAR(512),
+    texto CHAR(512)
+);
+success!
+timestamp: 2011-06-02T11:27:27.919000
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user(id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    url CHAR(512),
+    uuid CHAR(512)
+);
+success!
+timestamp: 2011-06-02T16:42:20.856000
+ALTER TABLE biv ADD versao_corporate CHAR(512);
+timestamp: 2011-06-02T16:42:21.154000
+ALTER TABLE biv ADD versao_apolo CHAR(512);
+timestamp: 2011-07-25T18:24:40.559820
+CREATE TABLE menu_dom(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    codigo CHAR(512),
+    descricao CHAR(512),
+    nome CHAR(512),
+    modulo CHAR(512)
+);
+success!
+timestamp: 2011-09-08T13:37:04.264744
+ALTER TABLE biv ADD versao CHAR(512);
+timestamp: 2011-09-08T13:37:04.376709
+CREATE TABLE ticket(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chamado CHAR(512),
+    consultor INTEGER REFERENCES auth_user(id) ON DELETE CASCADE,
+    analista INTEGER REFERENCES auth_user(id) ON DELETE CASCADE,
+    estado CHAR(512),
+    patch CHAR(1),
+    local_teste CHAR(512)
+);
+success!
+timestamp: 2011-09-08T13:37:40.594767
+CREATE TABLE caso_teste(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ticket INTEGER REFERENCES ticket(id) ON DELETE CASCADE,
+    acao TEXT,
+    resultado TEXT,
+    anexo CHAR(512),
+    ordem INTEGER
+);
+success!
+timestamp: 2011-09-08T13:37:40.720200
+ALTER TABLE item_biv ADD ticket INTEGER REFERENCES ticket(id) ON DELETE CASCADE;
+timestamp: 2011-09-08T13:38:00.858461
+CREATE TABLE teste(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ticket INTEGER REFERENCES ticket(id) ON DELETE CASCADE,
+    caso INTEGER REFERENCES caso_teste(id) ON DELETE CASCADE,
+    resultado TEXT,
+    conclusao CHAR(512)
+);
+success!
+timestamp: 2011-09-08T13:38:01.044707
+CREATE TABLE config(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    grupo_desenvolvedor INTEGER REFERENCES auth_group(id) ON DELETE CASCADE,
+    grupo_consultor INTEGER REFERENCES auth_group(id) ON DELETE CASCADE,
+    grupo_administrador INTEGER REFERENCES auth_group(id) ON DELETE CASCADE
+);
+success!
+timestamp: 2011-09-08T14:12:45.350948
+CREATE TABLE sprint(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    numero CHAR(512),
+    inicio DATE,
+    fim DATE
+);
+success!
+timestamp: 2011-09-08T14:32:01.151205
+ALTER TABLE teste ADD data DATE;
+timestamp: 2011-09-08T16:59:08.118927
+CREATE TABLE estado_ticket(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome CHAR(512)
+);
+success!
+timestamp: 2011-09-08T17:25:18.784458
+ALTER TABLE ticket ADD sprint INTEGER REFERENCES sprint(id) ON DELETE CASCADE;

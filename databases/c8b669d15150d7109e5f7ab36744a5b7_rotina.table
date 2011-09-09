@@ -1,0 +1,27 @@
+(dp1
+S'id'
+p2
+(dp3
+S'type'
+p4
+S'id'
+p5
+sS'sortable'
+p6
+I1
+sS'sql'
+p7
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
+p8
+ssS'nome'
+p9
+(dp10
+g4
+S'string'
+p11
+sg6
+I2
+sg7
+S'CHAR(512)'
+p12
+ss.

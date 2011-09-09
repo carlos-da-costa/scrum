@@ -1,0 +1,20 @@
+(dp1
+S'output'
+p2
+S''
+sS'layer'
+p3
+S'/home/www-data/web2py/applications/scrum/controllers/ticket.py'
+p4
+sS'code'
+p5
+S"# coding: utf8# tente algo como\n@auth.requires_login()\ndef index():    \n    tickets = db((db.ticket.consultor == auth.user_id) | \n                 (db.ticket.analista == auth.user_id)).select()\n    return dict(tickets=tickets)\n   \n@auth.requires_login()\ndef novo():\n    response.view = 'simple_form.html'\n    db.ticket.default = db.auth_id\n    db.ticket.writable = False  \n    form = crud.create(db.ticket)\n    return dict(form=form)\n\nresponse._vars=response._caller(novo)\n"
+p6
+sS'snapshot'
+p7
+(dp8
+sS'traceback'
+p9
+S'Traceback (most recent call last):\n  File "/home/www-data/web2py/gluon/restricted.py", line 192, in restricted\n    exec ccode in environment\n  File "/home/www-data/web2py/applications/scrum/controllers/ticket.py", line 16, in <module>\n  File "/home/www-data/web2py/gluon/globals.py", line 145, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/www-data/web2py/gluon/tools.py", line 2462, in f\n    return action(*a, **b)\n  File "/home/www-data/web2py/applications/scrum/controllers/ticket.py", line 11, in novo\n    db.ticket.default = db.auth_id\n  File "/home/www-data/web2py/gluon/dal.py", line 4331, in __getattr__\n    return self[key]\n  File "/home/www-data/web2py/gluon/dal.py", line 4325, in __getitem__\n    return dict.__getitem__(self, str(key))\nKeyError: \'auth_id\'\n'
+p10
+s.

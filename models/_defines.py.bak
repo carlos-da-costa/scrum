@@ -1,0 +1,11 @@
+# coding: utf8
+
+db.define_table('biv',
+                Field('numero','integer'),
+                Fielda('data','date'))
+
+db.define_table('item_biv',
+                Field('biv',db.biv),
+                Field('rotina',widget=SQLFORM.widgets.autocomplete(request,db.menu.nome,id_field=db.menu.id),
+                Field('menu'),
+                Field('texto'))

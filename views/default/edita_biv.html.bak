@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+<h1>Editar BIV</h1>
+<div id="item" style="float:left">
+    {{=biv}}
+    {{=novo_item}}
+</div>
+<div id="itens" style="float:left">    
+    {{=A(TAG.button('Gerar BIV'),_href=URL(r=request,f='gera_biv',args=[biv_id]))}}
+    {{=itens}}
+</div>

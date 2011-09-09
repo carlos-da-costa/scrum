@@ -1,0 +1,6 @@
+# coding: utf8
+# tente algo como
+@auth.requires_login()
+def index():
+    tickets = db(db.ticket.consultor == auth.user | db.ticket.analista == auth.user)
+    return dict(message="hello from ticket.py")
