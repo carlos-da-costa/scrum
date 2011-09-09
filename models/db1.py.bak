@@ -42,15 +42,18 @@ db.estado_ticket.id.represent = lambda id: A('Editar %i' % id,_href=URL(r=reques
 
 db.define_table('ticket',
                 Field('chamado'),
+                Field('sprint',db.sprint), 
                 Field('consultor',db.auth_user),
                 Field('analista',db.auth_user),
                 Field('estado'),
                 Field('patch','boolean'),
                 Field('local_teste'))
+db.ticket.id.represent = lambda id: A('Editar %i' % id,_href=URL(r=request,c='ticket',f='index',args=[id]))
 db.ticket.analista.requires = IS_IN_DB(db((db.auth_user.id == db.auth_membership.user_id) & (db.auth_membership.group_id==config.grupo_desenvolvedor)),
                                        db.auth_user.id,'%(first_name)s',
                                        zero='Sem desenvolvedores')                                        
 db.ticket.estado.requires = IS_IN_DB(db,db.estado_ticket.id,'%(nome)s')
+db.ticket.sprint.requires = IS_IN_DB(db,db.sprint.id,'Sprint %(numero)s')
                
 db.define_table('caso_teste',
                 Field('ticket',db.ticket),

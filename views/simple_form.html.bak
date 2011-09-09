@@ -1,4 +1,3 @@
-
 {{extend 'layout.html'}}
-<h1>Este é o template simple_form.html</h1>
-{{=BEAUTIFY(response._vars)}}
+<h1>{{response.subtitle}}</h1>
+{{=form}}

@@ -55,6 +55,7 @@
 'Introduction': 'Introduction',
 'Invalid Query': 'Consulta Inválida',
 'Invalid email': 'Email inválido',
+'Invalid login': 'Invalid login',
 'Last name': 'Último nome',
 'Layout': 'Layout',
 'Layouts': 'Layouts',

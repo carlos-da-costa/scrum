@@ -48,6 +48,7 @@ db.define_table('ticket',
                 Field('estado'),
                 Field('patch','boolean'),
                 Field('local_teste'))
+db.ticket.id.represent = lambda id: A('Editar %i' % id,_href=URL(r=request,c='ticket',f='editar',args=[id]))
 db.ticket.analista.requires = IS_IN_DB(db((db.auth_user.id == db.auth_membership.user_id) & (db.auth_membership.group_id==config.grupo_desenvolvedor)),
                                        db.auth_user.id,'%(first_name)s',
                                        zero='Sem desenvolvedores')                                        
