@@ -1,6 +1,9 @@
 #coding: utf8
 BRAZILIAN_DATE = IS_DATE(format=T('%Y-%m-%d'), error_message=T('deve ser dd/mm/yyyy!'))
 
+def EDITAR(id,url):
+    return A(TAG.button('Editar - %i' % id),_href=url+'/%i' % id)
+
 db.define_table('config',
                 Field('grupo_desenvolvedor',db.auth_group),
                 Field('grupo_consultor',db.auth_group),
@@ -40,20 +43,38 @@ db.define_table('estado_ticket',
                 Field('nome'))
 db.estado_ticket.id.represent = lambda id: A('Editar %i' % id,_href=URL(r=request,c='config',f='estado_ticket',args=[id]))
 
+db.define_table('sistema',
+                Field('nome'))
+db.sistema.id.represent = lambda id: A('Editar %i' % id,_href=URL(r=request,c='config',f='sistema',args=[id]))
+
+db.define_table('cliente',
+                Field('nome'))
+db.cliente.id.represent =  lambda id: A('Editar %i' % id,_href=URL(r=request,c='config',f='cliente',args=[id]))
+
+db.define_table('tipo_ticket',
+                Field('nome'))
+db.tipo_ticket                
+
 db.define_table('ticket',
                 Field('chamado'),
                 Field('sprint',db.sprint), 
                 Field('consultor',db.auth_user),
                 Field('analista',db.auth_user),
-                Field('estado'),
+                Field('estado',db.estado_ticket),
                 Field('patch','boolean'),
-                Field('local_teste'))
-db.ticket.id.represent = lambda id: A('Editar %i' % id,_href=URL(r=request,c='ticket',f='index',args=[id]))
+                Field('local_teste'),
+                Field('inicio','date',requires=BRAZILIAN_DATE ),
+                Field('fim','date',requires=BRAZILIAN_DATE   ),
+                Field('sistema',db.sistema ),
+                Field('cliente',db.cliente)) 
+db.ticket.id.represent = lambda id: A('Editar %i' % id,_href=URL(r=request,c='ticket',f='editar',args=[id]))
 db.ticket.analista.requires = IS_IN_DB(db((db.auth_user.id == db.auth_membership.user_id) & (db.auth_membership.group_id==config.grupo_desenvolvedor)),
                                        db.auth_user.id,'%(first_name)s',
                                        zero='Sem desenvolvedores')                                        
 db.ticket.estado.requires = IS_IN_DB(db,db.estado_ticket.id,'%(nome)s')
-db.ticket.sprint.requires = IS_IN_DB(db,db.sprint.id,'Sprint %(numero)s')
+db.ticket.sprint.requires = IS_EMPTY_OR(IS_IN_DB(db,db.sprint.id,'Sprint %(numero)s'))
+db.ticket.sistema.requires = IS_IN_DB(db,db.sistema.id,'%(nome)s')
+db.ticket.cliente.requires = IS_IN_DB(db,db.cliente.id,'%(nome)s')
                
 db.define_table('caso_teste',
                 Field('ticket',db.ticket),

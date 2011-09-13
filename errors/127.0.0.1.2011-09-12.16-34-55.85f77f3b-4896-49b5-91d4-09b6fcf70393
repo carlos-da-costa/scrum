@@ -1,0 +1,20 @@
+(dp1
+S'output'
+p2
+S''
+sS'layer'
+p3
+S'/home/www-data/web2py/applications/scrum/controllers/sprint.py'
+p4
+sS'code'
+p5
+S"# coding: utf8\n\n@auth.requires_login()\ndef index(): \n    sprints = db(db.sprint).select()\n    return dict(sprints=crud.select(db.sprint))\n\n@auth.requires_login()   \ndef novo():\n    form = crud.create(db.sprint)\n    response.view = 'simple_form.html'\n    return dict(form=form)\n\n@auth.requires_login()\ndef editar():\n    form = crud.update(db.sprint,request.args(0))\n    response.subtitle = 'Editar Sprint' \n    powerTable = plugins.powerTable\n    powerTable.datasource = db.sprint\n    powerTable.headers = 'labels'\n    powerTable.showkeycolumn = False\n    powerTable.keycolumn = 'sprint.id'\n    powerTable.columns = ['sprint.id','sprint.numero']\n    powerTable.extrajs = dict(autoresize={},\n                             tooltip={},\n                             details={'detailscolumns':'ticket.id,\\\n                                                        ticket.chamado,\\\n                                                        ticket.analista,\\\n                                                        ticket.cliente',\n                                     'detailscallback':URL(c='sprint',f='detalhes')\n                             })\n    return dict(form=form,table=powerTable.create())\n    \ndef detalhes():\n    #Key Processing\n    key = None\n    cols = None\n    for k in request.vars.keys():\n        if k[:3] == 'dt_':\n            key = request.vars[k]\n        elif k[:6] == 'dtcols':\n            cols = request.vars[k]\n    \n    #vars to work\n    tablename = key.split('.')[0]\n    fieldname = key.split('.')[1]\n    value = key.split('.')[2]\n    \n    tickets = db(db.tickets.sprint == value)\n    return SQLTABLE(db.tickets)\n    return value\n\nresponse._vars=response._caller(detalhes)\n"
+p6
+sS'snapshot'
+p7
+(dp8
+sS'traceback'
+p9
+S'Traceback (most recent call last):\n  File "/home/www-data/web2py/gluon/restricted.py", line 192, in restricted\n    exec ccode in environment\n  File "/home/www-data/web2py/applications/scrum/controllers/sprint.py", line 53, in <module>\n  File "/home/www-data/web2py/gluon/globals.py", line 145, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/www-data/web2py/applications/scrum/controllers/sprint.py", line 49, in detalhes\n    tickets = db(db.tickets.sprint == value)\n  File "/home/www-data/web2py/gluon/dal.py", line 4331, in __getattr__\n    return self[key]\n  File "/home/www-data/web2py/gluon/dal.py", line 4325, in __getitem__\n    return dict.__getitem__(self, str(key))\nKeyError: \'tickets\'\n'
+p10
+s.

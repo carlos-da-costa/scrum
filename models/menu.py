@@ -36,6 +36,9 @@ response.menu = [
                              ]),
     (T('Config'), False, '', [
                               (T('Geral'), False, URL('config','index'), [] ),
-                              (T('Estados de Tickets'), False, URL('config','estado_ticket'), [] ) 
+                              (T('Estados de Tickets'), False, URL('config','estado_ticket'), [] ),
+                              (T('Tipos de Ticket'), False, URL('config','tipo_ticket'), [] ), 
+                              (T('Clientes'), False, URL('config','clientes'), [] ),
+                              (T('Sistemas'), False, URL('config','sistemas'), [] ) 
                              ])                                                                 
     ]

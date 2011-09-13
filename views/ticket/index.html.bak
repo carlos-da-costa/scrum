@@ -1,4 +1,5 @@
 {{left_sidebar_enabled=right_sidebar_enabled=False}}
 {{extend 'layout.html'}}{{extend 'layout.html'}}
-<h1>Este é o template ticket/index.html</h1>
-{{=BEAUTIFY(response._vars)}}
+<h1>Tickets</h1>
+{{=tickets}}
+{{=imprimir}}

@@ -33,5 +33,11 @@ response.menu = [
     (T('Sprint'), False, '', [
                               (T('Novo'), False, URL('sprint','novo'), [] ),
                               (T('Selecionar'), False, URL('sprint','index'), [] ) 
-                             ])                                    
+                             ]),
+    (T('Config'), False, '', [
+                              (T('Geral'), False, URL('config','index'), [] ),
+                              (T('Estados de Tickets'), False, URL('config','estado_ticket'), [] ),
+                              (T('Clientes'), False, URL('config','clientes'), [] ),
+                              (T('Sistemas'), False, URL('config','sistemas'), [] ) 
+                             ])                                                                 
     ]

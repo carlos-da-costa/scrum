@@ -8,7 +8,7 @@
 	</TR>
 	<TR>
 		<TD COLSPAN=2 WIDTH=74 HEIGHT=14 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
-			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>SPRINT:</B>
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>SPRINT: {{=ticket.sprint.numero}}</B>
 			</FONT></FONT>
 			</P>
 		</TD>
@@ -21,14 +21,16 @@
 			 </FONT></FONT></P>
 		</TD>
 		<TD COLSPAN=2 WIDTH=161 STYLE="; border: 1px solid #000000; padding: 0cm">
-			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2><B>CHAMADO:</B></FONT></FONT>
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2><B>CHAMADO:{{=ticket.chamado}}</B></FONT></FONT>
 			</P>
 		</TD>
 	</TR>
 	<TR>
 		<TD COLSPAN=11 WIDTH=423 HEIGHT=19 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
-			<P CLASS="western" ALIGN=CENTER STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[ ]Desenvolvimento/teste
-			  [ ]Re-desenvolvimento/Re-teste</FONT></FONT></P>
+			
+      Estado: {{=ticket.estado.nome}}
+      <P CLASS="western" ALIGN=CENTER STYLE="widows: 2; orphans: 2">
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"></FONT></P>
 		</TD>
 		<TD COLSPAN=3 WIDTH=271 STYLE="; border: 1px solid #000000; padding: 0cm">
 			<P CLASS="western" ALIGN=CENTER STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif">Sistema:<FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT></P>
@@ -40,14 +42,12 @@
 			<FONT FACE="Tahoma, sans-serif"><FONT SIZE=4><B>D<br>E<br>S<br>E<br>N<br>V<br>O<br>L<br>V<br>I<br>M<br>E<br>N<br>T<br>O</B></FONT></FONT></P>
 		</TD>
 		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
-			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Nome
-			do analista: <B> </B></FONT></FONT></P>
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Nome do analista:{{=ticket.analista.first_name}} <B> </B></FONT></FONT></P>
 		</TD>
 	</TR>
 	<TR>
 		<TD COLSPAN=4 WIDTH=172 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
-			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data
-			Início: </FONT></FONT>
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data Início:{{=ticket.inicio}}</FONT></FONT>
 			</P>
 		</TD>
 		<TD COLSPAN=5 WIDTH=168 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
@@ -56,8 +56,7 @@
 			</P>
 		</TD>
 		<TD COLSPAN=2 WIDTH=158 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
-			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data
-			Fim: </FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SDFIELD TYPE=DATETIME SDVAL="40795,7223842593" SDNUM="1046;1046;DD/MM/AAAA">09/09/2011</SDFIELD></FONT></FONT></P>
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data Fim:{{=ticket.fim}} </FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SDFIELD TYPE=DATETIME SDVAL="40795,7223842593" SDNUM="1046;1046;DD/MM/AAAA">09/09/2011</SDFIELD></FONT></FONT></P>
 		</TD>
 		<TD COLSPAN=2 WIDTH=161 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
 			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Hora
@@ -164,18 +163,15 @@
 	<TR>
 		<TD COLSPAN=2 WIDTH=106 VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
 			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
-        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B>TEM
-			PATCH?  </B></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B><FONT SIZE=2 STYLE="font-size: 9pt"></FONT></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B></B></FONT></FONT></P>
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B>TEM PATCH? {{=ticket.patch}} </B></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B><FONT SIZE=2 STYLE="font-size: 9pt"></FONT></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B></B></FONT></FONT></P>
 		</TD>
 		<TD COLSPAN=4 WIDTH=105 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
 			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
-        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B>MENU
-			NOVO? </B></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B><FONT SIZE=2 STYLE="font-size: 9pt"></FONT></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B></B></FONT></FONT></P>
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B>MENU NOVO? </B></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B><FONT SIZE=2 STYLE="font-size: 9pt"></FONT></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B></B></FONT></FONT></P>
 		</TD>
 		<TD COLSPAN=7 WIDTH=448 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
 			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
-        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt">Local
-			dos arquivos para teste: </FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT></P>
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt">Local dos arquivos para teste: {{=ticket.local_teste}}</FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT></P>
 		</TD>
 	</TR>
 	<TR>
