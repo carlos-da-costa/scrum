@@ -13,79 +13,123 @@ sS'sql'
 p7
 S'CHAR(512)'
 p8
-ssS'consultor'
+ssS'local_teste'
 p9
 (dp10
-g4
-S'reference auth_user'
-p11
-sg6
-I4
-sg7
-S'INTEGER REFERENCES auth_user(id) ON DELETE CASCADE'
-p12
-ssS'local_teste'
-p13
-(dp14
 g4
 g5
 sg6
 I8
 sg7
 S'CHAR(512)'
+p11
+ssS'consultor'
+p12
+(dp13
+g4
+S'reference auth_user'
+p14
+sg6
+I4
+sg7
+S'INTEGER REFERENCES auth_user(id) ON DELETE CASCADE'
 p15
-ssS'analista'
+ssS'cliente'
 p16
 (dp17
 g4
-S'reference auth_user'
+S'reference cliente'
 p18
 sg6
-I5
+I12
 sg7
-S'INTEGER REFERENCES auth_user(id) ON DELETE CASCADE'
+S'INTEGER REFERENCES cliente(id) ON DELETE CASCADE'
 p19
-ssS'sprint'
+ssS'inicio'
 p20
 (dp21
 g4
-S'reference sprint'
+S'date'
 p22
 sg6
-I3
+I9
 sg7
-S'INTEGER REFERENCES sprint(id) ON DELETE CASCADE'
+S'DATE'
 p23
-ssS'estado'
+ssS'patch'
 p24
 (dp25
 g4
-g5
-sg6
-I6
-sg7
-S'CHAR(512)'
-p26
-ssS'id'
-p27
-(dp28
-g4
-S'id'
-p29
-sg6
-I1
-sg7
-S'INTEGER PRIMARY KEY AUTOINCREMENT'
-p30
-ssS'patch'
-p31
-(dp32
-g4
 S'boolean'
-p33
+p26
 sg6
 I7
 sg7
 S'CHAR(1)'
+p27
+ssS'sistema'
+p28
+(dp29
+g4
+S'reference sistema'
+p30
+sg6
+I11
+sg7
+S'INTEGER REFERENCES sistema(id) ON DELETE CASCADE'
+p31
+ssS'analista'
+p32
+(dp33
+g4
+S'reference auth_user'
 p34
+sg6
+I5
+sg7
+S'INTEGER REFERENCES auth_user(id) ON DELETE CASCADE'
+p35
+ssS'sprint'
+p36
+(dp37
+g4
+S'reference sprint'
+p38
+sg6
+I3
+sg7
+S'INTEGER REFERENCES sprint(id) ON DELETE CASCADE'
+p39
+ssS'estado'
+p40
+(dp41
+g4
+S'reference estado_ticket'
+p42
+sg6
+I6
+sg7
+S'INTEGER REFERENCES estado_ticket(id) ON DELETE CASCADE'
+p43
+ssS'id'
+p44
+(dp45
+g4
+S'id'
+p46
+sg6
+I1
+sg7
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
+p47
+ssS'fim'
+p48
+(dp49
+g4
+g22
+sg6
+I10
+sg7
+S'DATE'
+p50
 ss.

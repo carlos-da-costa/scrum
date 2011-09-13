@@ -1,0 +1,485 @@
+<TABLE WIDTH=696 CELLPADDING=0 CELLSPACING=0 STYLE="page-break-before: always">
+	<TR>
+		<TD COLSPAN=14 WIDTH=694 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="table-contents-western" ALIGN=CENTER STYLE="margin-top: 0.1cm; background: #e6e6e6">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2><B>FORMULÁRIO
+			DE TESTE</B></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=74 HEIGHT=14 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>SPRINT: {{=ticket.sprint.numero}}</B>
+			</FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=6 WIDTH=254 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt">Tipo:
+			</FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"></FONT></P>
+		</TD>
+		<TD COLSPAN=4 WIDTH=206 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Cliente:
+			 </FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=161 STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2><B>CHAMADO:{{=ticket.chamado}}</B></FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=423 HEIGHT=19 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			
+      {{=ticket.estado.nome}}
+      <P CLASS="western" ALIGN=CENTER STYLE="widows: 2; orphans: 2">
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"></FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=271 STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" ALIGN=CENTER STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif">Sistema:<FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=8 WIDTH=35 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="table-contents-western" ALIGN=CENTER STYLE="margin-left: 0.2cm; margin-right: 0.2cm">
+			<FONT FACE="Tahoma, sans-serif"><FONT SIZE=4><B>D<br>E<br>S<br>E<br>N<br>V<br>O<br>L<br>V<br>I<br>M<br>E<br>N<br>T<br>O</B></FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Nome do analista:{{=ticket.analista.first_name}} <B> </B></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=4 WIDTH=172 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data Início:{{=ticket.inicio}}</FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=5 WIDTH=168 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Hora
+			Início: </FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=158 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data Fim:{{=ticket.fim}} </FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SDFIELD TYPE=DATETIME SDVAL="40795,7223842593" SDNUM="1046;1046;DD/MM/AAAA">09/09/2011</SDFIELD></FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=161 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Hora
+			Fim: <SDFIELD TYPE=DATETIME SDVAL="40795,7223842593" SDNUM="1046;1046;HH:MM">17:20</SDFIELD></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Descrição
+			analista: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="table-contents-western" STYLE="margin-bottom: 0.11cm"><BR><BR>
+			</P>
+			<TABLE WIDTH=656 CELLPADDING=0 CELLSPACING=0>
+				<COL WIDTH=86>
+				<COL WIDTH=213>
+				<COL WIDTH=354>
+				<TR VALIGN=TOP>
+					<TD WIDTH=86 BGCOLOR="#e6e6e6" STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Módulo</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=213 BGCOLOR="#e6e6e6" STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Nome
+						da Rotina:</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=354 BGCOLOR="#e6e6e6" STYLE="border: 1px solid #000000; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Menu
+						da Rotina:</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR VALIGN=TOP>
+					<TD WIDTH=86 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2">
+              
+            </P>
+					</TD>
+					<TD WIDTH=213 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><BR>
+						</P>
+					</TD>
+					<TD WIDTH=354 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><BR>
+						</P>
+					</TD>
+				</TR>
+			</TABLE>
+			<P CLASS="table-contents-western"><BR><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="border: 1px solid #000000; padding: 0cm">
+			<P CLASS="table-contents-western" STYLE="margin-bottom: 0.11cm"><BR><BR>
+			</P>
+			<TABLE WIDTH=656 CELLPADDING=0 CELLSPACING=0>
+				<COL WIDTH=91>
+				<COL WIDTH=434>
+				<COL WIDTH=74>
+				<COL WIDTH=54>
+				<TR VALIGN=TOP>
+					<TD WIDTH=91 BGCOLOR="#e6e6e6" STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Pasta
+						Raiz:</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=434 BGCOLOR="#e6e6e6" STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Formulário
+						ou Relatório Alterado:</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=74 BGCOLOR="#e6e6e6" STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" ALIGN=CENTER STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data
+						Commit:</FONT></FONT></P>
+					</TD>
+					<TD WIDTH=54 BGCOLOR="#e6e6e6" STYLE="border: 1px solid #000000; padding: 0cm">
+						<P CLASS="western" ALIGN=CENTER STYLE="widows: 2; orphans: 2"><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Form.WIKI:</FONT></FONT></P>
+					</TD>
+				</TR>
+				<TR VALIGN=TOP>
+					<TD WIDTH=91 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><BR>
+						</P>
+					</TD>
+					<TD WIDTH=434 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><BR>
+						</P>
+					</TD>
+					<TD WIDTH=74 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><BR>
+						</P>
+					</TD>
+					<TD WIDTH=54 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+						<P CLASS="western" STYLE="widows: 2; orphans: 2"><BR>
+						</P>
+					</TD>
+				</TR>
+			</TABLE>
+			<P CLASS="table-contents-western"><BR><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=106 VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B>TEM PATCH? {{=ticket.patch}} </B></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B><FONT SIZE=2 STYLE="font-size: 9pt"></FONT></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B></B></FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=4 WIDTH=105 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B>MENU NOVO? </B></FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B><FONT SIZE=2 STYLE="font-size: 9pt"></FONT></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B></B></FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=7 WIDTH=448 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+        <FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt">Local dos arquivos para teste: {{=ticket.local_teste}}</FONT></FONT><FONT face="Trebuchet MS, sans-serif"><FONT size=1 style="font-size: 8pt"><B></B></FONT></FONT><FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Documentação
+			da Rotina: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Descrição
+			boletim: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=14 WIDTH=694 HEIGHT=15 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="table-contents-western" STYLE="margin-bottom: 0.11cm; background: transparent">
+			<BR><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=16 WIDTH=35 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="table-contents-western" ALIGN=CENTER STYLE="margin-left: 0.2cm; margin-right: 0.2cm; margin-bottom: 0.11cm">
+			<FONT FACE="Tahoma, sans-serif"><FONT SIZE=4><B>S<br>U<br>P<br>O<br>R<br>T<br>E</B></FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Nome
+			do Consultor do TESTE: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=4 WIDTH=172 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data
+			Início: </FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=5 WIDTH=168 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Hora
+			Início: </FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=158 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data
+			Fim: </FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=161 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Hora
+			Fim: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=498 VALIGN=TOP BGCOLOR="#e5e5e5" STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Check</SPAN><SPAN LANG="en-US">
+			list</SPAN></FONT></FONT></P>
+		</TD>
+		<TD WIDTH=85 VALIGN=TOP BGCOLOR="#e5e5e5" STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">SIM</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=75 VALIGN=TOP BGCOLOR="#e5e5e5" STYLE="border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">NÃO</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=498 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1-
+			Teste de interface já está concluído?</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=85 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+		<TD WIDTH=75 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=498 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">2
+			- Utilizado o banco de dados que simula a situação do cliente?</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=85 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+		<TD WIDTH=75 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=498 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">3
+			- Desenvolvedor especificou as principais rotinas a serem
+			testadas?</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=85 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+		<TD WIDTH=75 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=498 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">4
+			- Desenvolvedor orientou quais outras funções deverão ser
+			verificadas?</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=85 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+		<TD WIDTH=75 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=498 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">5
+			- Existe um relatório que trabalha os dados cuja entrada é esta
+			função?</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=85 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+		<TD WIDTH=75 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=498 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">6
+			- Houve tempo hábil para o teste acontecer de forma segura?</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=85 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+		<TD WIDTH=75 VALIGN=TOP STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Documentação
+			do teste: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=3 WIDTH=156 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">PARECER
+			TESTE:</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=5 WIDTH=174 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">[
+			]Concluído com sucesso</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=168 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">[
+			]Atendido parcialmente</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=161 STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">[
+			]Não está conforme</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 BGCOLOR="#c0c0c0" STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt"><B>RE-TESTE
+			DE VERSÃO:</B></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=13 WIDTH=659 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">Nome
+			do Consultor: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=3 WIDTH=156 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">Data
+			Início: </FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=5 WIDTH=174 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">Hora
+			Início:</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=168 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">Data
+			Fim: </FONT></FONT>
+			</P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=161 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">Hora
+			Fim: </FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=3 WIDTH=156 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">PARECER
+			RE-TESTE:</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=5 WIDTH=174 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">[
+			]Concluído com sucesso</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=168 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">[
+			]Atendido parcialmente</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=161 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=2 STYLE="font-size: 9pt">[
+			]Não está conforme</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=14 WIDTH=694 HEIGHT=15 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD COLSPAN=6 WIDTH=227 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Corrigido
+			na versão:</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=138 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">PLS:</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=168 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Data
+			Término:</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=161 STYLE="; border: 1px solid #000000; padding: 0cm">
+			<P CLASS="western" STYLE="margin-bottom: 0cm; widows: 2; orphans: 2">
+			<FONT FACE="Trebuchet MS, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Chamado
+			finalizado no SITE:</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>

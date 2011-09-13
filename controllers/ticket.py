@@ -16,7 +16,12 @@ def novo():
 @auth.requires(auth.has_membership(config.grupo_consultor) |
                auth.has_membership(config.grupo_desenvolvedor))
 def editar():
-    response.view = 'simple_form.html'
     response.subtitle = 'Editar Ticket - %s ' % request.args(0) 
     form = crud.update(db.ticket,request.args(0),deletable=False)     
-    return dict(form=form)
+    imprimir = A(TAG.button('Imprimir'),_href=URL(r=request,c='ticket',f='imprimir',args=[request.args(0)]))  
+    return dict(form=form,imprimir=imprimir)
+   
+def imprimir():
+    response.view = 'ticket/form_teste.html'
+    ticket = db(db.ticket.id == request.args(0)).select().first()
+    return dict(ticket=ticket)

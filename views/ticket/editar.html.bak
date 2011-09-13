@@ -1,0 +1,4 @@
+{{extend 'layout.html'}}
+<h1>{{=request.subtitle}}</h1>
+{{=form}}
+{{=imprimir}}
